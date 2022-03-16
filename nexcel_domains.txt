@@ -4,11 +4,11 @@ https://scdeployapi.starixplay.com
 https://scdeployapi2.starixplay.com
 https://sbportainer.starixplay.com
 https://sentry.starixplay.com
-https://thorivorysport.oneops.net:8282
+http://thorivorysport.oneops.net:8282
 https://licbotwebhook.starixplay.com
 https://vn.sabasports.com
 https://vnadmin.sabasports.com 
-https://vncdn.sabasports.comm
+https://vncdn.sabasports.com
 https://spumain.oneops.net
 https://spucts.oneops.net
 https://spuctscc.oneops.net
