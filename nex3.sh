@@ -4,12 +4,14 @@ lines=`cat $file`
 #lines=$(cat $file |tr "\n" " ")
 for line in $lines; do
    status_code=$(curl --write-out %{http_code} --silent --output /dev/null $line)
-   if [[ "$status_code" -ne 200 ]] ; then
-   echo "$line - Success - $status_code"
-   elif [[ "$status_code" -ne 503 ]] ; then
-   echo "$line - FAIL - $status_code - warning"
+   if echo $status_code | grep -q "503"; 
+   then echo "$line - FAIL - $status_code - warning";
+   elif echo $DEPLOY_ENV | grep -q "200"; 
+   then echo "$line - Success - $status_code";
+   elif echo $DEPLOY_ENV | grep -q "302"; 
+   then echo "$line - $status_code";
    else
    #exit 0
-   echo "$line - FAIL - $status_code"
+   then echo "$line - $status_code ---";
    fi
 done
