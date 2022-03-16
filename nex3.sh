@@ -6,6 +6,6 @@ for line in $lines; do
    status_code=$(curl --write-out %{http_code} --silent --output /dev/null $line)
    if echo $status_code | grep -q "503";
    then echo "$line - FAIL - $status_code - warning";
-   else then echo "$line - Success - $status_code";
+   else echo "$line - Success - $status_code";
    fi;
 done
