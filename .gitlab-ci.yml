@@ -5,6 +5,8 @@ check-nexcel:
   stage: test
   script:
     - ls
+    - sh ./nexcel.sh
+    - echo "done"
 
 check-nex3:
   stage: test
