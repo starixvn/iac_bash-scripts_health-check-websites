@@ -12,6 +12,6 @@ for line in $lines; do
    then echo "$line - $status_code";
    else
    #exit 0
-   then echo "$line - $status_code ---";
+   echo "$line - $status_code ---";
    fi
 done
