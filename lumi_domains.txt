@@ -5,7 +5,6 @@ https://api.gamesaba.com
 https://api2.sabagame.com
 https://api2.gamesaba.com
 https://adm.sabagame.com
-https://adm.gamesaba.com
 https://result.sabagame.com
 https://result.gamesaba.com
 https://proxy.sabagame.com
@@ -107,7 +106,7 @@ https://proxy.v-gaming.net/vipbaccarat/
 https://proxy.v-gaming.net/vipsediewar/
 https://proxy.v-gaming.net/turbooddeven/
 https://proxy.v-gaming.net/kenopromax/
-https://proxy.v-gaming.netbigsmall/
+https://proxy.v-gaming.net/bigsmall/
 https://proxy.v-gaming.net/user/
 https://proxy.v-gaming.net/minisedie/
 https://proxy.v-gaming.net/turbobigsmall/
