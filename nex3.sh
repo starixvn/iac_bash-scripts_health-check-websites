@@ -5,11 +5,11 @@ lines=`cat $file`
 for line in $lines; do
    status_code=$(curl --write-out %{http_code} --silent --output /dev/null $line)
    if [[ "$status_code" -ne 200 ]] ; then
-   echo "$line - FAIL - $status_code"
+   echo "$line - Success - $status_code"
    elif [[ "$status_code" -ne 503 ]] ; then
    echo "$line - FAIL - $status_code - warning"
    else
    #exit 0
-   echo "$line - Success - $status_code"
+   echo "$line - FAIL - $status_code"
    fi
 done
