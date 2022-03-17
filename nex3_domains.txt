@@ -22,3 +22,19 @@ https://proxy.vgaming88.net/roulette/
 https://proxy.vgaming88.net/casinoholdempoker/
 https://proxy.vgaming88.net/texasholdempoker/
 https://proxy.vgaming88.net/paigowpoker/
+###UAT SIT
+https://uatproxy.vgamesuat.com
+https://uat.vgamesuat.com
+https://uatapi.vgamesuat.com
+https://uatadm.vgamesuat.com
+https://uatresult.vgamesuat.com
+https://uatuser.vgamesuat.com
+https://uatmiddlesite.vgamesuat.com
+https://uatmini.vgamesuat.com
+https://sit.vgamesuat.com
+https://sitapi.vgamesuat.com
+https://sitadm.vgamesuat.com
+https://sitresult.vgamesuat.com
+https://situser.vgamesuat.com
+https://sitmiddlesite.vgamesuat.com
+https://sitmini.vgamesuat.com
