@@ -1,4 +1,4 @@
-### VG3 - Prod
+###VG3-Prod
 https://proxy.vgaming88.net
 https://www.vgaming88.net
 https://w1.vgaming88.net
@@ -23,7 +23,7 @@ https://proxy.vgaming88.net/roulette/
 https://proxy.vgaming88.net/casinoholdempoker/
 https://proxy.vgaming88.net/texasholdempoker/
 https://proxy.vgaming88.net/paigowpoker/
-### VG3 - UAT SIT
+###VG3-UAT-SIT
 https://uatproxy.vgamesuat.com
 https://uat.vgamesuat.com
 https://uatapi.vgamesuat.com
