@@ -3,7 +3,7 @@ file="lumi_domains.txt"
 lines=`cat $file`
 #lines=$(cat $file |tr "\n" " ")
 for line in $lines; do
-   status_code=$(curl --write-out %{http_code} --silent --output /dev/null $line)
+   status_code=$(curl --max-time 5 --connect-timeout 3 --write-out %{http_code} --silent --output /dev/null $line)
    #if echo $status_code | grep -q "503";
    if [ "$status_code" == "503" ] || [ "$status_code" == "500" ] || [ "$status_code" == "000" ]
    then result="$file - $line - FAIL - Response code is $status_code";echo "$result";
