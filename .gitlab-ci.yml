@@ -5,5 +5,5 @@ check-nexcel:
   stage: test
   script:
     - ls
-    - sh ./nexcel.sh
+    - sh ./test.sh
     - echo "done"
