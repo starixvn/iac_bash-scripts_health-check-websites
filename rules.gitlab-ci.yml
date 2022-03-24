@@ -1,29 +1,8 @@
 workflow:
   rules:
 ###NEXCEL
-    - if: $CI_COMMIT_TAG == "nexcel-local"
+    - if: '$CI_COMMIT_TAG =~ /nexcel/'
       variables:
-        ENV: "nexcel-local"
-    - if: $CI_COMMIT_TAG == "nexcel-uat"
-      variables:
-        ENV: "nexcel-uat"
-    - if: $CI_COMMIT_TAG == "nexcel-sit"
-      variables:
-        ENV: "nexcel-sit"
-    - if: $CI_COMMIT_TAG == "nexcel-aws-nex3"
-      variables:
-        ENV: "nexcel-aws-nex3"
-    - if: $CI_COMMIT_TAG == "nexcel-aws"
-      variables:
-        ENV: "nexcel-aws"
-    - if: $CI_COMMIT_TAG == "nexcel-prod-nex3"
-      variables:
-        ENV: "nexcel-prod-nex3"
-    - if: $CI_COMMIT_TAG == "nexcel-prod"
-      variables:
-        ENV: "nexcel-prod"
-    - if: $CI_COMMIT_TAG == "nexcel-all"
-      variables:
-        ENV: "nexcel-all"
+        ENV: $CI_COMMIT_TAG
 
 ###LUMI
