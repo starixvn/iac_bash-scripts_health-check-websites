@@ -1,8 +1,6 @@
 stages:
   - test
 
-include: 'rules.gitlab-ci.yml'
-
 check-nexcel:
   stage: test
   script:
