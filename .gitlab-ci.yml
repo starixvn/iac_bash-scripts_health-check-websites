@@ -1,6 +1,9 @@
 stages:
   - test
 
+- project: 'NEXOPS/haproxy/health-check-websites'
+    file: 'rules.gitlab-ci.yml'
+
 check-nexcel:
   stage: test
   script:
