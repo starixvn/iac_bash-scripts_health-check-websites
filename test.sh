@@ -1,6 +1,10 @@
 #!/bin/bash
 file="domains/$1.txt";
 echo $file;
+if [ ! -f $file ]; then
+    echo "File $file not found!"
+    exit 1;
+fi
 lines=`cat $file`
 #lines=$(cat $file |tr "\n" " ")
 for line in $lines; do
