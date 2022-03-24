@@ -1,4 +1,3 @@
-###Prod-SC1
 https://www.sabagame.com
 https://api.sabagame.com
 https://api.gamesaba.com
@@ -75,7 +74,6 @@ https://proxy.gamesaba.com/heroesslot/
 https://proxy.gamesaba.com/kenopower/
 https://proxy.gamesaba.com/kenomatch/
 https://proxy.gamesaba.com/casinoholdempoker/
-###Prod-VG2
 https://www.v-gaming.net
 https://www2.v-gaming.net
 https://result.v-gaming.net
