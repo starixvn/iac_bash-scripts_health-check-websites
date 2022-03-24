@@ -9,8 +9,8 @@ for line in $lines; do
    #if echo $status_code | grep -q "503";
    if [ "$status_code" == "503" ] || [ "$status_code" == "500" ] || [ "$status_code" == "000" ]
    then result="$file - $line - FAIL - Response code is $status_code";echo "$result";
-   curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$result&conversationId=19:fca7f2d1cc2949de8888faa2f3096861@thread.skype" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
-   curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$result&conversationId=-1001172443943" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
+   #curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$result&conversationId=19:fca7f2d1cc2949de8888faa2f3096861@thread.skype" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
+   #curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$result&conversationId=-1001172443943" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
    else result="$file - $line - Success - Response code is $status_code";echo "$result";
    fi;
 done
