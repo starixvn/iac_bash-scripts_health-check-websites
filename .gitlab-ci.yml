@@ -3,7 +3,7 @@ stages:
 
 include: 'rules.gitlab-ci.yml'
 
-check-nexcel:
+check-domains:
   stage: test
   script:
     - echo $ENV;

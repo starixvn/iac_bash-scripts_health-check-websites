@@ -1,4 +1,3 @@
-###Prod
 https://stdeployapi.starixplay.com
 https://stdeployapi2.starixplay.com
 https://scdeployapi.starixplay.com
