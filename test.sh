@@ -1,3 +1,3 @@
 #!/bin/bash
-echo $ENV;
+echo $1;
 echo 12;
