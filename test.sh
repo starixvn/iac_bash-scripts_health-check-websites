@@ -1,6 +1,6 @@
 #!/bin/bash
 echo $1;
-file="$1_domains.txt";
+file="domains/$1.txt";
 echo $file;
 lines=`cat $file`
 #lines=$(cat $file |tr "\n" " ")
