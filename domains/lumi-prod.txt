@@ -46,6 +46,8 @@ https://proxy.sabagame.com/kenopower/
 https://proxy.sabagame.com/kenomatch/
 https://proxy.sabagame.com/casinoholdempoker/
 https://proxy.sabagame.com/hilo/
+https://proxy.sabagame.com/bitcoinmaster/
+https://proxy.sabagame.com/texasholdempoker/
 https://proxy.gamesaba.com
 https://proxy.gamesaba.com/main/
 https://proxy.gamesaba.com/sedie/
@@ -74,6 +76,8 @@ https://proxy.gamesaba.com/heroesslot/
 https://proxy.gamesaba.com/kenopower/
 https://proxy.gamesaba.com/kenomatch/
 https://proxy.gamesaba.com/casinoholdempoker/
+https://proxy.gamesaba.com/bitcoinmaster/
+https://proxy.gamesaba.com/texasholdempoker/
 https://www.v-gaming.net
 https://www2.v-gaming.net
 https://result.v-gaming.net
