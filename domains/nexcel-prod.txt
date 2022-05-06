@@ -21,5 +21,4 @@ https://settlementcore.oneops.net
 https://prmscore.oneops.net
 https://owp1.oneops.net
 https://li.amazzu.com
-https://pa.amazzu.com
 https://bt.amazzu.com
