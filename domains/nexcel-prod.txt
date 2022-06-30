@@ -20,5 +20,4 @@ https://neo4j.oneops.net
 https://settlementcore.oneops.net
 https://prmscore.oneops.net
 https://owp1.oneops.net
-https://li.amazzu.com
 https://bt.amazzu.com
