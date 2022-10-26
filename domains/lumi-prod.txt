@@ -13,10 +13,8 @@ https://guides.gamesaba.com
 https://guides.sabagame.com
 https://mini.sabagame.com
 https://mini.gamesaba.com
-https://gw.gamesaba.com
 https://gw.sabagame.com
 https://proxy.sabagame.com
-https://proxy.sabagame.com/main/
 https://proxy.sabagame.com/sedie/
 https://proxy.sabagame.com/vsedie/
 https://proxy.sabagame.com/specialsedie/
@@ -47,7 +45,6 @@ https://proxy.sabagame.com/hilo/
 https://proxy.sabagame.com/bitcoinmaster/
 https://proxy.sabagame.com/texasholdempoker/
 https://proxy.gamesaba.com
-https://proxy.gamesaba.com/main/
 https://proxy.gamesaba.com/sedie/
 https://proxy.gamesaba.com/vsedie/
 https://proxy.gamesaba.com/specialsedie/
@@ -95,7 +92,6 @@ https://guides2.v-gaming.net
 https://gw.v-gaming.net
 https://gw2.v-gaming.net
 https://proxy.v-gaming.net
-https://proxy.v-gaming.net/main/
 https://proxy.v-gaming.net/sedie/
 https://proxy.v-gaming.net/vsedie/
 https://proxy.v-gaming.net/specialsedie/
@@ -123,7 +119,6 @@ https://proxy.v-gaming.net/luckywheel/
 https://proxy.v-gaming.net/kenomatch/
 https://proxy.v-gaming.net/kenopower/
 https://proxy2.v-gaming.net
-https://proxy2.v-gaming.net/main/
 https://proxy2.v-gaming.net/sedie/
 https://proxy2.v-gaming.net/vsedie/
 https://proxy2.v-gaming.net/specialsedie/
