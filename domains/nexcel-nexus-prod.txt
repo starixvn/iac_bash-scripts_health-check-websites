@@ -1,4 +1,4 @@
-https://thorivorysport.oneops.net:8282
+http://thorivorysport.oneops.net:8282/whoami
 https://licbotwebhook.starixplay.com
 https://crm.oneops.net
 https://licbot.oneops.net
