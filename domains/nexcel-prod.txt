@@ -13,15 +13,12 @@ https://crmnew.oneops.net
 https://newstag.oneops.net
 https://qland.starixplay.com
 https://vn.sabasports.com
-https://www.saba.vn
+https://sabavn.com
+https://sabavn.net
 https://vncdn.sabasports.com
 https://vnadmin.sabasports.com 
-https://vn.sabasports.com
-https://vnadmin.sabasports.com 
-https://settlement.oneops.net
-https://settlement2.oneops.net
-https://settlement3.oneops.net
-https://ticketvoiding.oneops.net
+https://settle.oneops.net
+https://tvs.oneops.net
 https://owp.oneops.net
 https://parlayrms.oneops.net
 https://riskcontrol.oneops.net
@@ -67,8 +64,6 @@ https://www.bbmgr.com
 https://www.boluna.net
 https://www.zuki88.com
 https://www.balu88.com
-https://www.hay88ag.com
-https://www.hay88ag.net
 https://mb.sabi88.com
 https://mb.manga88.com
 https://mb.sasa889.com
@@ -105,8 +100,6 @@ https://mb.bbmgr.com
 https://mb.boluna.net
 https://mb.zuki88.com
 https://mb.balu88.com
-https://mb.hay88ag.com
-https://mb.hay88ag.net
 https://mb2.b88ag.com
 https://mb2.b8ag.com
 https://www.logifun.com
