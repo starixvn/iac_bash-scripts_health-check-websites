@@ -83,8 +83,6 @@ https://adm.v-gaming.net
 https://adm2.v-gaming.net
 https://result.v-gaming.net
 https://result2.v-gaming.net
-https://news.v-gaming.net
-https://news2.v-gaming.net
 https://m.v-gaming.net
 https://m2.v-gaming.net
 https://guides.v-gaming.net
@@ -149,7 +147,6 @@ https://www.vgaming.win
 https://api.vgaming.win
 https://adm.vgaming.win
 https://result.vgaming.win
-https://news.vgaming.win
 https://proxy.vgaming.win
 https://proxy.vgaming.win/sedie/
 https://proxy.vgaming.win/vsedie/
