@@ -10,7 +10,7 @@ lines=`cat $file`
 info="========Checking for $file ========"
 curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$info&conversationId=-1001172443943" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
 for line in $lines; do
-   status_code=$(curl --max-time 5 --connect-timeout 3 --write-out %{http_code} --silent --output /dev/null $line)
+   status_code=$(curl --retry 5  --retry-max-time 120 --max-time 5 --connect-timeout 3 --write-out %{http_code} --silent --output /dev/null $line)
    #if echo $status_code | grep -q "503";
    if [ "$status_code" == "503" ] || [ "$status_code" == "500" ] || [ "$status_code" == "404" ] || [ "$status_code" == "000" ]
    then result="$line ($status_code -> FAIL)";echo "$result";
