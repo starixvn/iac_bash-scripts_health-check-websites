@@ -180,7 +180,6 @@ https://spudcs.oneops.net/healthz
 https://spufs.oneops.net/healthz
 https://spuvr.oneops.net/healthz
 https://sputgr.oneops.net/healthz
-https://neo4j.oneops.net/healthz
 https://fpsjobs.oneops.net
 https://csd.detecas.com
 https://sub.detecas.com
@@ -190,7 +189,6 @@ https://admin.detecas.com
 https://sc.detecas.com
 https://api.detecas.com
 https://ws.detecas.com
-https://ws-int.detecas.com
 https://fpc.detecas.com/healthz
 https://fpc.saceted.com/healthz
 https://fpc.casemed.net/healthz
