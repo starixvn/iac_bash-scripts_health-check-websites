@@ -2,6 +2,7 @@ https://stdeployapi.starixplay.com
 https://stdeployapi2.starixplay.com
 https://scdeployapi.starixplay.com
 https://scdeployapi2.starixplay.com
+https://portainer.starixplay.com
 https://sbportainer.starixplay.com
 https://sentry.starixplay.com
 http://thorivorysport.oneops.net:8282/whoami
