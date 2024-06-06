@@ -13,13 +13,12 @@ https://scqa1.detecas.com
 https://scqa2.detecas.com
 https://admin.detecas.com
 https://sc.detecas.com
-https://api.detecas.com
+https://api.detecas.com/healthz
 https://ws.detecas.com
 https://ws-int.detecas.com
 https://fpc.detecas.com
 https://fpc.saceted.com
 https://fpc.casemed.net"
-https://fpsdemo.oneops.net
 https://fs.oneops.net
 https://tgrs.oneops.net
 https://cts.oneops.net

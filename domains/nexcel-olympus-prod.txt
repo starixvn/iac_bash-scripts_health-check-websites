@@ -5,9 +5,7 @@ https://ticketvoiding.oneops.net
 https://owp.oneops.net
 https://parlayrms.oneops.net
 https://riskcontrol.oneops.net
-https://napadmin.oneops.net
 https://datawarehouse.oneops.net
 https://reports.oneops.net
 https://settlementcore.oneops.net
-https://prmscore.oneops.net
 https://owp1.oneops.net
