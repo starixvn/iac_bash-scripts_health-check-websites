@@ -7,7 +7,7 @@ if [ ! -f $file ]; then
 fi;
 lines=`cat $file`
 #lines=$(cat $file |tr "\n" " ")
-info="========Start Checking for $file ======="
+info="🔹🔹🔹Start Checking for $file 🔹🔹🔹"
 curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$info&conversationId=19:7bbc32eca7a74681adb19e97d9ead538@thread.tacv2" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
 
 
