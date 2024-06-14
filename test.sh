@@ -26,6 +26,7 @@ done
 
 if [ ! $report_message ]; then
    report_message="{{Success}} All domains is healthy {{Success}}"
+fi
 
 
 curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$report_message&conversationId=19:7bbc32eca7a74681adb19e97d9ead538@thread.tacv2" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
