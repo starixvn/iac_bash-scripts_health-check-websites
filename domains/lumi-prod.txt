@@ -8,6 +8,7 @@ https://adm.sabagame.com
 https://result.sabagame.com
 https://result.gamesaba.com
 https://proxy.sabagame.com
+https://proxy.sabagame.net
 https://m.gamesaba.com
 https://m.sabagame.com
 https://guides.gamesaba.com
@@ -15,7 +16,7 @@ https://guides.sabagame.com
 https://mini.sabagame.com
 https://mini.gamesaba.com
 https://gw.sabagame.com
-https://proxy.sabagame.com
+https://gw.sabagame.net
 https://proxy.sabagame.com/sedie/
 https://proxy.sabagame.com/vsedie/
 https://proxy.sabagame.com/specialsedie/
