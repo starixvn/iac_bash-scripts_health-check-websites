@@ -6,9 +6,9 @@ if [ ! -f $file ]; then
     exit 1;
 fi;
 lines=`cat $file`
-#lines=$(cat $file |tr "\n" " ")
+#lines=$(cat $file |tr "\n" " ") - 19:7bbc32eca7a74681adb19e97d9ead538@thread.tacv2
 info="🔹🔹🔹Start Checking for $file 🔹🔹🔹"
-curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$info&conversationId=19:7bbc32eca7a74681adb19e97d9ead538@thread.tacv2" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
+curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$info&conversationId=B08GPPK88MS:T08ACMHMMFS:C08JN7KBE73" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
 
 
 report_message=""
@@ -29,4 +29,4 @@ if [ ! $report_message ]; then
 fi
 
 
-curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$report_message&conversationId=19:7bbc32eca7a74681adb19e97d9ead538@thread.tacv2" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
+curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$report_message&conversationId=B08GPPK88MS:T08ACMHMMFS:C08JN7KBE73" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
