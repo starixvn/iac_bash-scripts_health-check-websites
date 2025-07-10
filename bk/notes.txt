@@ -1,2 +1,0 @@
-HTTP_STATUS="$(curl -IL --silent example.com | grep HTTP )";    
-echo "${HTTP_STATUS}";
