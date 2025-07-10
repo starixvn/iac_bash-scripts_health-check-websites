@@ -6,10 +6,10 @@ update_hosts() {
     local ip="58.84.9.42"
     
     # Remove existing entry if exists
-    sudo sed -i "/$domain/d" /etc/hosts
+    sed -i "/$domain/d" /etc/hosts
     
     # Add new entry
-    echo "$ip $domain" | sudo tee -a /etc/hosts > /dev/null
+    echo "$ip $domain" | tee -a /etc/hosts > /dev/null
     cat /etc/hosts
 }
 
