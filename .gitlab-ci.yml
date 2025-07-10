@@ -1,5 +1,6 @@
 stages:
   - test
+  - cleanup
 
 include: 'rules.gitlab-ci.yml'
 
@@ -9,7 +10,6 @@ check-domains:
     - echo $ENV;
     - sh test.sh "$ENV"
     - echo "done"
-    - curl --request DELETE --header "PRIVATE-TOKEN:$CI_JOB_TOKEN" $GITLAB_API_URL/projects/$CI_PROJECT_ID/repository/tags/$CI_COMMIT_TAG ;
   rules:
     - if: $CI_COMMIT_TAG =~ /nexcel/ || $CI_COMMIT_TAG =~ /lumi/ || $CI_COMMIT_TAG =~ /nexops/ || $CI_COMMIT_TAG =~ /alpha/
 
@@ -20,6 +20,13 @@ check-domains-with-hosts:
     - chmod +x test-with-hosts.sh
     - sudo ./test-with-hosts.sh
     - echo "done"
-    - curl --request DELETE --header "PRIVATE-TOKEN:$CI_JOB_TOKEN" $GITLAB_API_URL/projects/$CI_PROJECT_ID/repository/tags/$CI_COMMIT_TAG ;
   rules:
     - if: $CI_COMMIT_TAG =~ /test-with-hosts/
+
+clean-tag:
+  stage: cleanup
+  script:
+    - curl --request DELETE --header "PRIVATE-TOKEN:$CI_JOB_TOKEN" $GITLAB_API_URL/projects/$CI_PROJECT_ID/repository/tags/$CI_COMMIT_TAG
+  rules:
+    - if: $CI_COMMIT_TAG
+  allow_failure: true
