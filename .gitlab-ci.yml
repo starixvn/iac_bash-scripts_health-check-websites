@@ -19,7 +19,7 @@ check-domains-with-hosts:
   script:
     - echo "Testing with custom hosts file"
     - chmod +x test-with-hosts.sh
-    - sudo ./test-with-hosts.sh
+    - sh ./test-with-hosts.sh
     - echo "done"
   allow_failure: true
   rules:
