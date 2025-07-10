@@ -27,5 +27,8 @@ for file in "domains/lumi-prod.txt" "domains/nexcel-prod.txt"; do
 done
 
 # Run the original test script
-./test.sh lumi-prod
-./test.sh nexcel-prod
+chmod +x test.sh
+echo "---testing test.sh lumi-prod---"
+sh .test.sh lumi-prod
+echo "---testing test.sh nexcel-prod---"
+sh .test.sh nexcel-prod
