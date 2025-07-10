@@ -29,6 +29,6 @@ done
 # Run the original test script
 chmod +x test.sh
 echo "---testing test.sh lumi-prod---"
-sh .test.sh lumi-prod
+sh test.sh lumi-prod
 echo "---testing test.sh nexcel-prod---"
-sh .test.sh nexcel-prod
+sh test.sh nexcel-prod
