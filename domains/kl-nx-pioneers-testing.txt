@@ -6,7 +6,7 @@ https://m7-klp.starixplay.com/whoami.aspx
 https://mbc-int-klp.starixplay.com/main/health
 https://indo-int-klp.starixplay.com/main/health
 https://789y-int-klp.starixplay.com/main/health
-https://api-klp.starixplay.com/health
+https://api-klp.starixplay.com/alps/v1/health
 https://www.bth688.com/liveness
 https://mbc-klp.starixplay.com/liveness
 https://www.bth788.com/liveness

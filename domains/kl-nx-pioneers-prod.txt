@@ -55,8 +55,8 @@ https://intp21.focapts.com/main/health
 https://intp22.focapts.com/main/health
 https://intp23.focapts.com/main/health
 https://intp24.focapts.com/main/health
-https://api.ultra88.com/health
-https://api.file678.com/health
+https://api.ultra88.com/alps/v1/health
+https://api.file678.com/alps/v1/health
 https://www.ultra88.com/liveness
 https://www.logifun.com/liveness
 https://www.zata88.com/liveness
