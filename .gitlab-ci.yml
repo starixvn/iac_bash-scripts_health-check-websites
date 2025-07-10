@@ -7,11 +7,20 @@ include: 'rules.gitlab-ci.yml'
 check-domains:
   stage: test
   script:
-    - echo $ENV;
-    - sh test.sh "$ENV"
+    - |
+      if [[ $CI_COMMIT_TAG =~ _prod-domains$ ]]; then
+        DOMAIN_FILE="domains/${CI_COMMIT_TAG%_prod-domains}.txt"
+      elif [[ $CI_COMMIT_TAG =~ _testing-domains$ ]]; then
+        DOMAIN_FILE="domains/${CI_COMMIT_TAG%_testing-domains}.txt"
+      else
+        DOMAIN_FILE="domains/$ENV.txt"
+      fi
+    - echo "Testing domains from $DOMAIN_FILE"
+    - sh test.sh "$DOMAIN_FILE"
     - echo "done"
   allow_failure: true
   rules:
+    - if: $CI_COMMIT_TAG =~ /_prod-domains$/ || $CI_COMMIT_TAG =~ /_testing-domains$/
     - if: $CI_COMMIT_TAG =~ /nexcel/ || $CI_COMMIT_TAG =~ /lumi/ || $CI_COMMIT_TAG =~ /nexops/ || $CI_COMMIT_TAG =~ /alpha/
 
 check-domains-with-hosts:

@@ -28,7 +28,13 @@ done
 
 # Run the original test script
 chmod +x test.sh
-echo "---testing test.sh kl-nx-pioneers-testing---"
-sh test.sh kl-nx-pioneers-testing
-echo "---testing test.sh kl-nx-pioneers-prod---"
-sh test.sh kl-nx-pioneers-prod
+# Pioneers
+echo "---testing test.sh kl-nx-pioneers_testing-domains---"
+sh test.sh kl-nx-pioneers_testing-domains
+echo "---testing test.sh kl-nx-pioneers_prod-domains---"
+sh test.sh kl-nx-pioneers_prod-domains
+# Pentagon
+echo "---testing test.sh kl-nx-pentagon_testing-domains---"
+sh test.sh kl-nx-pentagon_testing-domains
+echo "---testing test.sh kl-nx-pentagon_prod-domains---"
+sh test.sh kl-nx-pentagon_prod-domains
