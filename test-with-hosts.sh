@@ -14,7 +14,7 @@ update_hosts() {
 }
 
 # Process domains from files
-for file in "domains/lumi-prod.txt" "domains/nexcel-prod.txt"; do
+for file in "domains/kl-nx-pioneers-testing.txt" "domains/kl-nx-pioneers-prod.txt"; do
     if [ -f "$file" ]; then
         while IFS= read -r line || [ -n "$line" ]; do
             # Extract domain from URL
@@ -28,7 +28,7 @@ done
 
 # Run the original test script
 chmod +x test.sh
-echo "---testing test.sh lumi-prod---"
-sh test.sh lumi-prod
-echo "---testing test.sh nexcel-prod---"
-sh test.sh nexcel-prod
+echo "---testing test.sh kl-nx-pioneers-testing---"
+sh test.sh kl-nx-pioneers-testing
+echo "---testing test.sh kl-nx-pioneers-prod---"
+sh test.sh kl-nx-pioneers-prod
