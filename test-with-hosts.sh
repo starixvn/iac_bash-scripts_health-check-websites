@@ -7,20 +7,19 @@ update_hosts() {
     
     # Remove existing entry if exists
     sed -i "/$domain/d" /etc/hosts
-    
     # Add new entry
     echo "$ip $domain" | tee -a /etc/hosts > /dev/null
-    cat /etc/hosts
 }
 
 # Process domains from files
-for file in "domains/kl-nx-pioneers-testing.txt" "domains/kl-nx-pioneers-prod.txt"; do
+for file in "domains/kl-nx-pioneers_testing-domains.txt" "domains/kl-nx-pioneers_prod-domains.txt" "domains/kl-nx-pentagon_testing-domains.txt" "domains/kl-nx-pentagon_prod-domains.txt"; do
     if [ -f "$file" ]; then
         while IFS= read -r line || [ -n "$line" ]; do
             # Extract domain from URL
             domain=$(echo "$line" | sed -E 's#https?://([^/]+).*#\1#')
             update_hosts "$domain"
         done < "$file"
+        cat /etc/hosts
     else
         echo "File $file not found!"
     fi
