@@ -1,5 +1,5 @@
 workflow:
   rules:
-    - if: $CI_COMMIT_TAG =~ /nexcel/ || $CI_COMMIT_TAG =~ /lumi/ || $CI_COMMIT_TAG =~ /nexops/ || $CI_COMMIT_TAG =~ /alpha/ || $CI_COMMIT_TAG =~ /test-with-hosts/
+    - if: $CI_COMMIT_TAG
       variables:
         ENV: $CI_COMMIT_TAG
