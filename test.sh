@@ -35,7 +35,7 @@ main() {
 
   # Collect the report after all background jobs finish
   wait
-  report_message=$(cat "$report_lock"p)
+  report_message=$(cat "$report_lock")
   rm "$report_lock"
 
   if [[ -z "$report_message" ]]; then
