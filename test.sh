@@ -35,10 +35,10 @@ main() {
 
   # Collect the report after all background jobs finish
   wait
-  report_message=$(cat "$report_lock")
+  report_message=$(cat "$report_lock"p)
   rm "$report_lock"
 
-  if [ -z $report_message ]; then
+  if [[ -z "$report_message" ]]; then
     report_message="{{Success}} All domains on $file is healthy {{Success}}"
   fi
 
