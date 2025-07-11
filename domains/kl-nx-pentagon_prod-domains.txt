@@ -55,7 +55,7 @@ https://result.hotdog-games.com/health
 https://proxy.hotdog-games.com/sedie
 https://guides.hotdog-games.com
 https://gw.hotdog-games.com
-https://client.hotdog-games.com
+https://client.hotdog-games.com/portrait-client-2
 https://xd.hotdog-games.com
 https://lobby.hotdog-games.com
 https://ow.hotdog-games.com

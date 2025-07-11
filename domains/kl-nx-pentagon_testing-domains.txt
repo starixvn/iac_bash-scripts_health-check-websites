@@ -27,8 +27,6 @@ https://promotion.vgaming88.net/
 https://api.numberx.vip/
 https://adm.numberx.vip/
 https://result.numberx.vip/health
-https://simulator.numberx.vip/
-https://ow.numberx.vip/
 https://proxy.numberx.vip/bacball1/
 https://guides.numberx.vip/
 https://api.sabakeno.net/
@@ -42,7 +40,7 @@ https://result2.hotdog-games.com/health
 https://proxy2.hotdog-games.com/sedie/
 https://guides2.hotdog-games.com/
 https://gw2.hotdog-games.com/
-https://client2.hotdog-games.com/
+https://client2.hotdog-games.com/portrait-client-2
 https://xd2.hotdog-games.com/
 https://lobby2.hotdog-games.com/
 https://ow2.hotdog-games.com/

@@ -1,0 +1,14 @@
+https://mountfile.starixplay.com/login
+https://msite.oneops.net/healthcheck
+https://msite2.oneops.net/healthcheck
+https://datawarehouse.oneops.net/healthcheck
+https://napmailfiles.oneops.net/healthcheck
+https://napsc.oneops.net/healthcheck
+https://hi.tawkwith.com/api/info
+https://owp1.oneops.net/healthcheck
+https://parlayrms.oneops.net/healthcheck
+https://reports.oneops.net/healthcheck
+https://riskcontrol.oneops.net/healthcheck
+https://settle.oneops.net/healthcheck
+https://tgrs.oneops.net/User/Login
+https://tvs.oneops.net/healthcheck
