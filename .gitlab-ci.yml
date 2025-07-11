@@ -33,7 +33,7 @@ check-domains-with-hosts:
     - echo "done"
   allow_failure: true
   rules:
-    - if: $CI_COMMIT_TAG =~ /with-hosts$/
+    - if: $CI_COMMIT_TAG =~ /_with-hosts$/
 
 all-check-domains-with-hosts:
   stage: test
