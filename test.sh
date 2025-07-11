@@ -1,32 +1,49 @@
 #!/bin/bash
-file="domains/$1.txt";
-echo $file;
-if [ ! -f $file ]; then
-    echo "File $file not found!"
+
+report_lock=$(mktemp)
+check_url() {
+  url="$1"
+  status_code=$(curl --retry 5 --retry-max-time 120 --max-time 5 --connect-timeout 3 --write-out %{http_code} --silent --output /dev/null "$line")
+  if [[ "$status_code" == "503" || "$status_code" == "500" || "$status_code" == "404" || "$status_code" == "000" ]]; then
+    result="$line ($status_code -> FAIL)"
+    echo "$result"
+    # Append to report_message in a thread-safe way
+    echo "{{NewLine}}{{Error}} $result" >> "$report_lock"
+  else
+    echo "$line ($status_code -> OK)"
+  fi
+}
+
+
+main() {
+  file="domains/$1.txt"
+  if [ ! -f $file ]; then
+    echo "Input file not found: $file"
     exit 1;
-fi;
-lines=`cat $file`
-#lines=$(cat $file |tr "\n" " ") - 19:7bbc32eca7a74681adb19e97d9ead538@thread.tacv2
-info="🔹🔹🔹Start Checking for $file 🔹🔹🔹"
-curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$info&conversationId=B08GPPK88MS:T08ACMHMMFS:C08JN7KBE73" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
+  else
+    echo $file
+  fi
 
+  # Notify about process started
+  info="🔹🔹🔹Start Checking for $file 🔹🔹🔹"
+  curl -d "token=$SKYNEX_TOKEN&message=$info&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
 
-report_message=""
-for line in $lines; do
-   status_code=$(curl --retry 5  --retry-max-time 120 --max-time 5 --connect-timeout 3 --write-out %{http_code} --silent --output /dev/null $line)
-   #if echo $status_code | grep -q "503";
-   if [ "$status_code" == "503" ] || [ "$status_code" == "500" ] || [ "$status_code" == "404" ] || [ "$status_code" == "000" ]; then
-      result="$line ($status_code -> FAIL)";
-      echo "$result";
-      report_message=$report_message"{{NewLine}}{{Error}} $result"
-   else 
-      result="$line $status_code -> OK)";echo "$result";
-   fi;
-done
+  urls=`cat $file`
 
-if [ ! $report_message ]; then
-   report_message="{{Success}} All domains on $file is healthy {{Success}}"
-fi
+  # Run checks in parallel
+  echo "$urls" | xargs -n 1 -P $THREADS -I {} bash -c 'check_url "$@"' _ {}
 
+  # Collect the report after all background jobs finish
+  wait
+  report_message=$(cat "$report_lock")
+  rm "$report_lock"
 
-curl -d "token=0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9&message=$report_message&conversationId=B08GPPK88MS:T08ACMHMMFS:C08JN7KBE73" https://bot.nexdev.net/skynex/api/messages/ForwardWithToken;
+  if [ ! $report_message ]; then
+    report_message="{{Success}} All domains on $file is healthy {{Success}}"
+  fi
+
+  # Send the final report
+  curl -d "token=$SKYNEX_TOKEN&message=$report_message&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
+}
+
+main "$@"
