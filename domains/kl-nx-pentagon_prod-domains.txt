@@ -4,9 +4,9 @@ https://adm.sabagame.com/health
 https://adm.gamesaba.com/health
 https://result.sabagame.com/health
 https://result.gamesaba.com/health
-https://proxy.sabagame.com/sedie
-https://proxy.gamesaba.com/sedie
-https://proxy.sabagame.net/sedie
+https://proxy.sabagame.com/sedie/
+https://proxy.gamesaba.com/sedie/
+https://proxy.sabagame.net/sedie/
 https://guides.sabagame.com
 https://guides.gamesaba.com
 https://guides.sabagame.net
@@ -22,8 +22,8 @@ https://adm.vgames88.com
 https://adm.playvgames.com
 https://result.vgames88.com/health
 https://result.playvgames.com/health
-https://proxy.vgames88.com/sedie
-https://proxy.playvgames.com/sedie
+https://proxy.vgames88.com/sedie/
+https://proxy.playvgames.com/sedie/
 https://guides.vgames88.com
 https://guides.playvgames.com
 https://gw.vgames88.com
@@ -52,7 +52,7 @@ https://www.hotdog-games.com
 https://api.hotdog-games.com
 https://adm.hotdog-games.com
 https://result.hotdog-games.com/health
-https://proxy.hotdog-games.com/sedie
+https://proxy.hotdog-games.com/sedie/
 https://guides.hotdog-games.com
 https://gw.hotdog-games.com
 https://client.hotdog-games.com/portrait-client-2
