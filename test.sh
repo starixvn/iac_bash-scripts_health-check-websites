@@ -13,6 +13,7 @@ check_url() {
     echo "$line ($status_code -> OK)"
   fi
 }
+export -f check_url
 
 
 main() {
