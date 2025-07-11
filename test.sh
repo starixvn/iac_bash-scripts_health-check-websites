@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-report_lock=$(mktemp)
+export report_lock=$(mktemp)
 check_url() {
   url="$1"
   status_code=$(curl --retry 5 --retry-max-time 120 --max-time 5 --connect-timeout 3 --write-out %{http_code} --silent --output /dev/null "$url")
