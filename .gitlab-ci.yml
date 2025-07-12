@@ -28,9 +28,9 @@ check-domains-with-hosts:
   script:
     - |
       if [[ $CI_COMMIT_TAG =~ _prod-domains_with-hosts$ ]]; then
-        DOMAIN_FILE="domains/${CI_COMMIT_TAG%_prod-domains_with-hosts}_prod-domain.txt"
+        DOMAIN_FILE="domains/${CI_COMMIT_TAG%_prod-domains_with-hosts}_prod-domains.txt"
       elif [[ $CI_COMMIT_TAG =~ _testing-domains_with-hosts$ ]]; then
-        DOMAIN_FILE="domains/${CI_COMMIT_TAG%_testing-domains_with-hosts}_testing-domain.txt"
+        DOMAIN_FILE="domains/${CI_COMMIT_TAG%_testing-domains_with-hosts}_testing-domains.txt"
       else
         DOMAIN_FILE="domains/${CI_COMMIT_TAG%_with-hosts}.txt"
       fi
