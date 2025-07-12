@@ -36,7 +36,7 @@ check-domains-with-hosts:
       fi
     - echo "Testing with custom hosts file for $DOMAIN_FILE"
     - chmod +x test-with-hosts.sh
-    - bash ./test-with-hosts.sh "domains/$DOMAIN_FILE.txt"
+    - bash ./test-with-hosts.sh "$DOMAIN_FILE"
     - echo "done"
   allow_failure: true
   rules:
