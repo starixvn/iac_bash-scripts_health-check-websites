@@ -11,22 +11,20 @@ update_hosts() {
     echo "$ip $domain" | tee -a /etc/hosts > /dev/null
 }
 
-# Process domains from files
-for file in "domains/$1.txt"; do
-    if [ -f "$file" ]; then
-        while IFS= read -r line || [ -n "$line" ]; do
-            # Extract domain from URL
-            domain=$(echo "$line" | sed -E 's#https?://([^/]+).*#\1#')
-            update_hosts "$domain"
-        done < "$file"
-        cat /etc/hosts
-    else
-        echo "File $file not found!"
-    fi
-done
+# Process domains from file
+if [ -f "$1" ]; then
+    while IFS= read -r line || [ -n "$line" ]; do
+        # Extract domain from URL
+        domain=$(echo "$line" | sed -E 's#https?://([^/]+).*#\1#')
+        update_hosts "$domain"
+    done < "$1"
+    cat /etc/hosts
+else
+    echo "File $1 not found!"
+    exit 1
+fi
 
 # Run the original test script
 chmod +x test.sh
-# Pioneers
 echo "---testing test.sh $1 ---"
-sh test.sh $1
+bash test.sh "$1"

@@ -26,10 +26,17 @@ check-domains:
 check-domains-with-hosts:
   stage: test
   script:
-    - DOMAIN_FILE="${CI_COMMIT_TAG%_with-hosts}"
-    - echo "Testing with custom hosts file"
+    - |
+      if [[ $CI_COMMIT_TAG =~ _prod-domains_with-hosts$ ]]; then
+        DOMAIN_FILE="domains/${CI_COMMIT_TAG%_prod-domains_with-hosts}-prod.txt"
+      elif [[ $CI_COMMIT_TAG =~ _testing-domains_with-hosts$ ]]; then
+        DOMAIN_FILE="domains/${CI_COMMIT_TAG%_testing-domains_with-hosts}-testing.txt"
+      else
+        DOMAIN_FILE="domains/${CI_COMMIT_TAG%_with-hosts}.txt"
+      fi
+    - echo "Testing with custom hosts file for $DOMAIN_FILE"
     - chmod +x test-with-hosts.sh
-    - bash ./test-with-hosts.sh ${DOMAIN_FILE}
+    - bash ./test-with-hosts.sh "$DOMAIN_FILE"
     - echo "done"
   allow_failure: true
   rules:
