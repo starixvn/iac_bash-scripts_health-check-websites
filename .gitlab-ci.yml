@@ -16,7 +16,7 @@ check-domains:
         DOMAIN_FILE="domains/$ENV.txt"
       fi
     - echo "Testing domains for $DOMAIN_FILE"
-    - bash test.sh "$DOMAIN_FILE"
+    - bash test.sh "domains/$DOMAIN_FILE.txt"
     - echo "done"
   allow_failure: true
   rules:

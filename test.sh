@@ -18,7 +18,7 @@ export -f check_url
 
 
 main() {
-  file="domains/$1.txt"
+  file="$1"
   if [ ! -f $file ]; then
     echo "Input file not found: $file"
     exit 1;
