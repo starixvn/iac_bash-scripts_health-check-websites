@@ -4,7 +4,7 @@ set -euo pipefail
 export report_lock=$(mktemp)
 check_status() {
   url="$1"
-  status_code=$(curl --retry 5 --retry-max-time 120 --max-time 5 --connect-timeout 3 --write-out %{http_code} --silent --output /dev/null "$url")
+  status_code=$(curl -k --retry 5 --retry-max-time 120 --max-time 5 --connect-timeout 3 --write-out %{http_code} --silent --output /dev/null "$url")
   if [[ "$status_code" == "503" || "$status_code" == "500" || "$status_code" == "404" || "$status_code" == "000" ]]; then
     result="$url ($status_code -> FAIL)"
     echo "$result"
@@ -18,7 +18,7 @@ export -f check_status
 
 check_response() {
   url="$1"
-  response=$(curl --retry 5 --retry-max-time 120 --max-time 5 --connect-timeout 3 --silent "$url")
+  response=$(curl -k --retry 5 --retry-max-time 120 --max-time 5 --connect-timeout 3 --silent "$url")
   if [[ "$response" != "$HEALTHCHECK_KEYWORD" ]]; then
     result="$url"
     echo "$result"
