@@ -2,7 +2,7 @@
 variables:
   SKYNEX_WEBHOOK: "https://bot.nexdev.net/skynex/api/messages/ForwardWithToken"
   SKYNEX_TOKEN: "0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9"
-  THREADS: 10
+  THREADS: 25
   REPORT_GROUP_ID: "B08GPPK88MS:T08ACMHMMFS:C08JN7KBE73"
   IP_HOST_MAP_KL: "58.84.9.42"
   IP_HOST_MAP_AWS_SG: "54.254.108.156"
