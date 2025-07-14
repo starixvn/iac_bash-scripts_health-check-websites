@@ -47,24 +47,23 @@ main() {
   # Header for Message of the REPORT
   report_header="Tag Check: \\\`$CI_COMMIT_TAG\\\`{{NewLine}}"
   report_header+="Total checked: $(wc -l < $file){{NewLine}}"
+  
   # Run check HEALTHPATH
   if [[ "$CI_COMMIT_TAG" =~ _healthpath(-with-hosts)?$ ]]; then
     xargs -n 1 -P $THREADS -I {} bash -c 'check_response "$@"' _ {} < "$file"
-    wait
-    report_header+=":rm-rf: Failed check: $(wc -l < $report_lock){{NewLine}}"
-    report_message="${report_header}$(cat $report_lock)"
 
   # Run check STATUS CODE
   else
     xargs -n 1 -P $THREADS -I {} bash -c 'check_status "$@"' _ {} < "$file"
-    wait
-    report_header+=":rm-rf: Failed: $(wc -l < $report_lock){{NewLine}}"
-    report_message="${report_header}$(cat $report_lock)"
   fi
 
   # Gen Message when ALL CHECK PASSED
+  wait
   if [ ! -s "$report_lock" ]; then
     report_message="${report_header}:bypass_active: All Healthcheck Passed!"
+  else
+    report_header+=":rm-rf: Failed: $(wc -l < $report_lock){{NewLine}}"
+    report_message="${report_header}$(cat $report_lock)"
   fi
 
   # Send the FINAL REPORT
