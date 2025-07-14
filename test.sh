@@ -46,7 +46,7 @@ main() {
 
   report_header=""
   # Run check HEALTHPATH
-  if [[ "$CI_COMMIT_TAG" =~ _healthpath$ ]]; then
+  if [[ "$CI_COMMIT_TAG" =~ _healthpath(-with-hosts)?$ ]]; then
     report_header="Response Check: \\\`$HEALTHCHECK_KEYWORD\\\`{{NewLine}}"
     report_header+="Total checked: $(wc -l $file){{NewLine}}"
 

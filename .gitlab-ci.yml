@@ -68,6 +68,28 @@ check-domain-healthcheck-path:
   rules:
     - if: $CI_COMMIT_TAG =~ /_healthpath$/
 
+check-domain-healthcheck-path-with-hosts:
+  stage: test
+  script:
+    - |
+      DOMAIN_FILE="domains/${CI_COMMIT_TAG%_healthpath-with-hosts}.txt"
+      echo "Test Domain Healthcheck path with hosts file!"
+      chmod +x update-hosts.sh parser-healthcheck-path.sh test.sh
+
+      echo "[*] Parser URL Healthcheck"
+      bash ./parser-healthcheck-path.sh $DOMAIN_FILE
+
+      echo "[*] Update Host file"
+      bash ./update-hosts.sh $DOMAIN_FILE
+
+      echo "[*] Start Running Test"
+      bash test.sh $DOMAIN_FILE
+
+      echo "[*] Test Finish!"
+  allow_failure: true
+  rules:
+    - if: $CI_COMMIT_TAG =~ /_healthpath-with-hosts$/
+
 clean-tag:
   stage: cleanup
   needs:
