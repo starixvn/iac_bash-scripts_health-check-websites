@@ -45,7 +45,7 @@ main() {
   curl -d "token=$SKYNEX_TOKEN&message=$info&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
 
   report_header="Tag Check: \\\`$CI_COMMIT_TAG\\\`{{NewLine}}"
-  report_header+="Total checked: $(wc -l $file){{NewLine}}"
+  report_header+="Total checked: $(wc -l < $file){{NewLine}}"
   # Run check HEALTHPATH
   if [[ "$CI_COMMIT_TAG" =~ _healthpath(-with-hosts)?$ ]]; then
     xargs -n 1 -P $THREADS -I {} bash -c 'check_response "$@"' _ {} < "$file"
@@ -57,7 +57,7 @@ main() {
   else
     xargs -n 1 -P $THREADS -I {} bash -c 'check_status "$@"' _ {} < "$file"
     wait
-    report_header+=":rm-rf: Failed: $(wc -l $report_lock){{NewLine}}"
+    report_header+=":rm-rf: Failed: $(wc -l < $report_lock){{NewLine}}"
     report_message="${report_header}$(cat $report_lock)"
   fi
 
