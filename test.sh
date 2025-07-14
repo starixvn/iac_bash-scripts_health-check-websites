@@ -44,6 +44,7 @@ main() {
   info="🔹🔹🔹Start Healthcheck for \\\`$file\\\` 🔹🔹🔹"
   curl -d "token=$SKYNEX_TOKEN&message=$info&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
 
+  # Header for Message of the REPORT
   report_header="Tag Check: \\\`$CI_COMMIT_TAG\\\`{{NewLine}}"
   report_header+="Total checked: $(wc -l < $file){{NewLine}}"
   # Run check HEALTHPATH
@@ -61,11 +62,12 @@ main() {
     report_message="${report_header}$(cat $report_lock)"
   fi
 
+  # Gen Message when ALL CHECK PASSED
   if [ ! -s "$report_lock" ]; then
     report_message="${report_header}:bypass_active: All Healthcheck Passed!"
   fi
 
-  # Send the final report
+  # Send the FINAL REPORT
   curl -d "token=$SKYNEX_TOKEN&message=$report_message&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
 }
 
