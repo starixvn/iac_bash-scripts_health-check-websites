@@ -1,6 +1,6 @@
 https://datawarehouse.oneops.net/healthcheck
 https://hi.tawkwith.com/api/info
-https://mountfile.starixplay.com/login
+https://mountfile.oneops.net/login
 https://msite.oneops.net/healthcheck
 https://msite2.oneops.net/healthcheck
 https://napmailfiles.oneops.net/healthcheck
