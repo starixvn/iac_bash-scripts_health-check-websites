@@ -58,12 +58,16 @@ check-domain-healthcheck-path:
   script:
     - |
       DOMAIN_FILE="domains/${CI_COMMIT_TAG%_healthpath}.txt"
-      echo "Test Domain with Healthcheck path!"
+      echo "Test Domain with Healthcheck path - with Host file!"
       chmod +x parser-healthcheck-path.sh test.sh
+
+      echo "[*] Parser URL Healthcheck"
       bash ./parser-healthcheck-path.sh $DOMAIN_FILE
-      echo "--- Start Running Test ---"
+
+      echo "[*] Start Running Test"
       bash test.sh $DOMAIN_FILE
-      echo "done"
+
+      echo "[*] Test Finish!"
   allow_failure: true
   rules:
     - if: $CI_COMMIT_TAG =~ /_healthpath$/
