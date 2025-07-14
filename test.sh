@@ -20,12 +20,12 @@ check_response() {
   url="$1"
   response=$(curl --retry 5 --retry-max-time 120 --max-time 5 --connect-timeout 3 --silent "$url")
   if [[ "$response" != "$HEALTHCHECK_KEYWORD" ]]; then
-    result="$url ($status_code -> FAIL)"
+    result="$url ($response -> FAILED)"
     echo "$result"
     # Append to report_message in a thread-safe way
     echo "{{NewLine}}{{Error}} $result" >> "$report_lock"
   else
-    echo "$url ($status_code -> OK)"
+    echo "$url ($response -> OK)"
   fi
 }
 export -f check_response
