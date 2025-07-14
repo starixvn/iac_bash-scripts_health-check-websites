@@ -41,13 +41,13 @@ main() {
   fi
 
   # Notify about process started
-  info="🔹🔹🔹Start Healthcheck for \`$file\` 🔹🔹🔹"
+  info="🔹🔹🔹Start Healthcheck for \\\`$file\\\` 🔹🔹🔹"
   curl -d "token=$SKYNEX_TOKEN&message=$info&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
 
   report_header=""
   # Run checks in parallel
   if [[ "$CI_COMMIT_TAG" =~ _healthpath$ ]]; then
-    report_header="Response Check: \`$HEALTHCHECK_KEYWORD\`{{NewLine}}"
+    report_header="Response Check: \\\`$HEALTHCHECK_KEYWORD\\\`{{NewLine}}"
     report_header+="Total domain checked: $(wc -l $file){{NewLine}}"
 
     xargs -n 1 -P $THREADS -I {} bash -c 'check_response "$@"' _ {} < "$file"
@@ -66,11 +66,8 @@ main() {
     report_message="${report_header}$(cat $report_lock)"
   fi
 
-  # Collect the report after all background jobs finish
-  rm "$report_lock"
-
   if [ ! -s "$report_lock" ]; then
-    report_message="{{Success}} All domains on \`$file\` is Healthy!"
+    report_message="{{Success}} All domains on \\\`$file\\\` is Healthy!"
   fi
 
   # Send the final report
