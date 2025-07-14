@@ -45,8 +45,8 @@ main() {
   curl -d "token=$SKYNEX_TOKEN&message=$info&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
 
   # Header for Message of the REPORT
-  report_header="Tag Check: \\\`$CI_COMMIT_TAG\\\`{{NewLine}}"
-  report_header+="Total checked: $(wc -l < $file){{NewLine}}"
+  report_header="*Tag Check*: \\\`$CI_COMMIT_TAG\\\`{{NewLine}}"
+  report_header+="*Total checked*: $(wc -l < $file){{NewLine}}"
   
   # Run check HEALTHPATH
   if [[ "$CI_COMMIT_TAG" =~ _healthpath(-with-hosts)?$ ]]; then
@@ -60,9 +60,9 @@ main() {
   # Gen Message when ALL CHECK PASSED
   wait
   if [ ! -s "$report_lock" ]; then
-    report_message="${report_header}:bypass_active: All Healthcheck Passed!"
+    report_message="${report_header}:bypass_active: *All Healthcheck Passed!*"
   else
-    report_header+=":rm-rf: Failed: $(wc -l < $report_lock){{NewLine}}"
+    report_header+="*Failed* :rm-rf:: $(wc -l < $report_lock){{NewLine}}"
     report_message="${report_header}$(cat $report_lock)"
   fi
 
