@@ -62,7 +62,7 @@ main() {
   fi
 
   if [ ! -s "$report_lock" ]; then
-    report_message="{{Success}} All domains on \\\`$file\\\` is Healthy!"
+    report_message="${report_header}:bypass_active: All Healthcheck Passed!"
   fi
 
   # Send the final report
