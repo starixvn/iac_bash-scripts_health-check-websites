@@ -9,7 +9,7 @@ check_status() {
     result="$url ($status_code -> FAIL)"
     echo "$result"
     # Append to report_message in a thread-safe way
-    echo "{{NewLine}}{{Error}} $result" >> "$report_lock"
+    echo "{{NewLine}} ° $result" >> "$report_lock"
   else
     echo "$url ($status_code -> OK)"
   fi
