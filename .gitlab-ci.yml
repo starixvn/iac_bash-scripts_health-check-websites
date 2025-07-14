@@ -45,10 +45,26 @@ check-domains-with-hosts:
 all-check-domains-with-hosts:
   stage: test
   script:
-    - echo "Testing with custom hosts file"
-    - chmod +x test-all-with-hosts.sh
-    - bash ./test-all-with-hosts.sh
-    - echo "done"
+    - |
+      echo "Test All Domain with Host file!"
+      chmod +x update-hosts.sh test.sh
+
+      ls ./domains | grep "_prod" | 
+        while IFS= read -r file; do
+          file_name=$(echo $file | tr -d ".txt")
+          export CI_COMMIT_TAG="${file_name}_with-hosts"
+          export DOMAIN_FILE="domain/${file_name}.txt"
+
+          echo "Testing with custom hosts file for $DOMAIN_FILE"
+          echo "[*] Update Host file"
+          bash ./update-hosts.sh $DOMAIN_FILE
+          echo "[*] Start Running Test"
+          bash ./test.sh $DOMAIN_FILE
+          echo "[*] Test Finish for $DOMAIN_FILE!"
+        done
+
+      echo "[*] Test ALL Finish!"
+      
   allow_failure: true
   rules:
     - if: $CI_COMMIT_TAG =~ /test-all-with-hosts/
