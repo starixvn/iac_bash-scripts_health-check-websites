@@ -46,8 +46,8 @@ main() {
 
   report_header=""
   # Run checks in parallel
-  if [[ "$CI_COMMIT_TAG" =~ _health-path$ ]]; then
-    report_header="Response Check: \'$HEALTHCHECK_KEYWORD\'{{NewLine}}"
+  if [[ "$CI_COMMIT_TAG" =~ _healthpath$ ]]; then
+    report_header="Response Check: \`$HEALTHCHECK_KEYWORD\`{{NewLine}}"
     report_header+="Total domain checked: $(wc -l $file){{NewLine}}"
 
     xargs -n 1 -P $THREADS -I {} bash -c 'check_response "$@"' _ {} < "$file"
@@ -62,7 +62,7 @@ main() {
     xargs -n 1 -P $THREADS -I {} bash -c 'check_status "$@"' _ {} < "$file"
     wait
 
-    report_header+="Failed: $(wc -l $report_lock){{NewLine}}"
+    report_header+=":rm-rf: Failed: $(wc -l $report_lock){{NewLine}}"
     report_message="${report_header}$(cat $report_lock)"
   fi
 
@@ -70,7 +70,7 @@ main() {
   rm "$report_lock"
 
   if [ ! -s "$report_lock" ]; then
-    report_message="{{Success}} All domains on \'$file\' is Healthy!"
+    report_message="{{Success}} All domains on \`$file\` is Healthy!"
   fi
 
   # Send the final report
