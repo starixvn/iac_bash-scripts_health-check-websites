@@ -27,17 +27,17 @@ check-domains-with-hosts:
   stage: test
   script:
     - |
-      if [[ $CI_COMMIT_TAG =~ _prod-domains_with-hosts$ ]]; then
-        DOMAIN_FILE="${CI_COMMIT_TAG%_prod-domains_with-hosts}_prod-domains"
-      elif [[ $CI_COMMIT_TAG =~ _testing-domains_with-hosts$ ]]; then
-        DOMAIN_FILE="${CI_COMMIT_TAG%_testing-domains_with-hosts}_testing-domains"
-      else
-        DOMAIN_FILE="${CI_COMMIT_TAG%_with-hosts}"
-      fi
-    - echo "Testing with custom hosts file for $DOMAIN_FILE"
-    - chmod +x test-with-hosts.sh
-    - bash ./test-with-hosts.sh "domains/$DOMAIN_FILE.txt"
-    - echo "done"
+      DOMAIN_FILE="domains/${CI_COMMIT_TAG%_with-hosts}.txt"
+      echo "Testing with custom hosts file for $DOMAIN_FILE"
+      chmod +x update-hosts.sh test.sh
+
+      echo "[*] Update Host file"
+      bash ./update-hosts.sh $DOMAIN_FILE
+
+      echo "[*] Start Running Test"
+      bash ./test.sh $DOMAIN_FILE
+
+      echo "[*] Test Finish!"
   allow_failure: true
   rules:
     - if: $CI_COMMIT_TAG =~ /_with-hosts$/
@@ -65,7 +65,7 @@ check-domain-healthcheck-path:
       bash ./parser-healthcheck-path.sh $DOMAIN_FILE
 
       echo "[*] Start Running Test"
-      bash test.sh $DOMAIN_FILE
+      bash ./test.sh $DOMAIN_FILE
 
       echo "[*] Test Finish!"
   allow_failure: true
@@ -87,7 +87,7 @@ check-domain-healthcheck-path-with-hosts:
       bash ./update-hosts.sh $DOMAIN_FILE
 
       echo "[*] Start Running Test"
-      bash test.sh $DOMAIN_FILE
+      bash ./test.sh $DOMAIN_FILE
 
       echo "[*] Test Finish!"
   allow_failure: true
