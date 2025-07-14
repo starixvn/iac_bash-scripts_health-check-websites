@@ -50,7 +50,7 @@ main() {
   if [[ "$CI_COMMIT_TAG" =~ _healthpath(-with-hosts)?$ ]]; then
     xargs -n 1 -P $THREADS -I {} bash -c 'check_response "$@"' _ {} < "$file"
     wait
-    report_header+=":rm-rf: Failed check: $(wc -l $report_lock){{NewLine}}"
+    report_header+=":rm-rf: Failed check: $(wc -l < $report_lock){{NewLine}}"
     report_message="${report_header}$(cat $report_lock)"
 
   # Run check STATUS CODE
