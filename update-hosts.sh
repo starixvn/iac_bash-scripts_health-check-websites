@@ -17,6 +17,7 @@ if [ -f "$1" ]; then
         ip_host_map="$IP_HOST_MAP_AWS_SG"
     else
         ip_host_map="$IP_HOST_MAP_KL"
+    fi
 
     # Update hosts file
     while IFS= read -r line || [ -n "$line" ]; do
