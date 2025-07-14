@@ -8,16 +8,13 @@ check-domains:
   stage: test
   script:
     - |
-      if [[ $CI_COMMIT_TAG =~ _prod-domains$ ]]; then
-        DOMAIN_FILE="${CI_COMMIT_TAG%_prod-domains}_prod-domains"
-      elif [[ $CI_COMMIT_TAG =~ _testing-domains$ ]]; then
-        DOMAIN_FILE="${CI_COMMIT_TAG%_testing-domains}_testing-domains"
-      else
-        DOMAIN_FILE="domains/$ENV.txt"
-      fi
-    - echo "Testing domains for $DOMAIN_FILE"
-    - bash test.sh "domains/$DOMAIN_FILE.txt"
-    - echo "done"
+      DOMAIN_FILE="domains/$ENV.txt"
+      echo "Testing domain for $DOMAIN_FILE"
+
+      echo "[*] Start Running Test"
+      bash ./test.sh $DOMAIN_FILE
+      
+      echo "[*] Test Finish!"
   allow_failure: true
   rules:
     - if: $CI_COMMIT_TAG =~ /_prod-domains$/ || $CI_COMMIT_TAG =~ /_testing-domains$/
