@@ -4,7 +4,6 @@ https://vn-dep-api-gw.amazzu.com/
 https://deposit-api-gw.oneops.net/
 https://internal.amazzu.com/whoami.aspx
 https://lap.amazzu.com/whoami.aspx
-https://lap.12betsports.com/whoami.aspx
 https://lap.owadmin999.com/whoami.aspx
 https://lap.bpadmin999.com/whoami.aspx
 https://lap.jollyadmin888.com/whoami.aspx
