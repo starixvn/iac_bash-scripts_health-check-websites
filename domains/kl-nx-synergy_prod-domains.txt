@@ -12,4 +12,4 @@ https://riskcontrol.oneops.net/healthcheck
 https://settle.oneops.net/healthcheck
 https://tgrs.oneops.net/User/Login
 https://tvs.oneops.net/healthcheck
-https://vn-reward-wallet-api.oneops.net/health
+https://vn-reward-wallet-api.oneops.net/healthz
