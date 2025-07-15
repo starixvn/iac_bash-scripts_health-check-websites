@@ -270,3 +270,13 @@ http://alpha-content-2.oneops.net
 https://alpha-content-demo.oneops.net
 https://stdcsv2.726872.com/health
 https://stdcsv2.oneops.net/health
+https://alp1.gatonic.com/liveness
+https://alp2.gatonic.com/liveness
+https://alp3.gatonic.com/liveness
+https://mbp1.gatonic.com/liveness
+https://mbp2.gatonic.com/liveness
+https://mbp3.gatonic.com/main/health
+https://mbc.gatonic.com/main/health
+https://mb.gatonic.com/main/health
+https://789y.gatonic.com/main/health
+https://7y.gatonic.com/main/health
