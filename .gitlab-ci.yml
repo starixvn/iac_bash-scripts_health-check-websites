@@ -72,24 +72,24 @@ all-check-domains:
       echo "Test All Domain!"
       chmod +x test.sh
 
+      pre_notify=":pepe-sprint: :pepe-sprint: Start Healthcheck for ALL Domains :pepe-sprint: :pepe-sprint:"
+      curl -d "token=$SKYNEX_TOKEN&message=$pre_notify&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
+
+
       find ./domains -type f -name "*_prod*.txt" | while IFS= read -r domain_file; do
         file_name=$(basename "$domain_file" .txt)
         export CI_COMMIT_TAG="${file_name}"
         export DOMAIN_FILE="domains/${file_name}.txt"
 
-        pre_notify=":pepe-sprint: :pepe-sprint: Start Healthcheck for ALL Domains :pepe-sprint: :pepe-sprint:"
-        curl -d "token=$SKYNEX_TOKEN&message=$pre_notify&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
-
         echo "Running HealthCheck for $DOMAIN_FILE"
         echo "[🚀] Start Running Test"
         bash ./test.sh $DOMAIN_FILE
-
-        post_notify="🏁 Test Finish!"
-        curl -d "token=$SKYNEX_TOKEN&message=$post_notify&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
-
         echo "[✅] Test Finish for $DOMAIN_FILE!"
       done
 
+      post_notify="🏁 Test Finish!"
+      curl -d "token=$SKYNEX_TOKEN&message=$post_notify&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
+      
       echo "[🏁] Test ALL Finish!"
       
   allow_failure: true
