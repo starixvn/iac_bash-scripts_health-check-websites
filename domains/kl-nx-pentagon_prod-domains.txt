@@ -13,7 +13,6 @@ https://guides.sabagame.net
 https://gw.sabagame.com
 https://gw.gamesaba.com
 https://gw.sabagame.net
-https://admperf.sabagame.com/health
 https://mgapi.sabagame.com
 https://mgadm.sabagame.com/api
 https://api.vgames88.com
