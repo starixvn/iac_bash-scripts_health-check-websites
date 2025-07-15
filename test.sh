@@ -41,8 +41,8 @@ main() {
   fi
 
   # Notify about process started
-  info=":pepe-sprint: :pepe-sprint: Start Healthcheck for \\\`$file\\\` :pepe-sprint: :pepe-sprint:"
-  curl -d "token=$SKYNEX_TOKEN&message=$info&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
+  # info=":pepe-sprint: :pepe-sprint: Start Healthcheck for \\\`$file\\\` :pepe-sprint: :pepe-sprint:"
+  # curl -d "token=$SKYNEX_TOKEN&message=$info&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
 
   # Header for Message of the REPORT
   report_header="**Tag Check**: \\\`$CI_COMMIT_TAG\\\`{{NewLine}}"
