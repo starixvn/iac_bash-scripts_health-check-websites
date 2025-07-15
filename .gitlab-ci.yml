@@ -77,9 +77,16 @@ all-check-domains:
         export CI_COMMIT_TAG="${file_name}"
         export DOMAIN_FILE="domains/${file_name}.txt"
 
+        pre_notify=":pepe-sprint: :pepe-sprint: Start Healthcheck for ALL Domains :pepe-sprint: :pepe-sprint:"
+        curl -d "token=$SKYNEX_TOKEN&message=$pre_notify&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
+
         echo "Running HealthCheck for $DOMAIN_FILE"
         echo "[🚀] Start Running Test"
         bash ./test.sh $DOMAIN_FILE
+
+        post_notify="🏁 Test Finish!"
+        curl -d "token=$SKYNEX_TOKEN&message=$post_notify&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
+
         echo "[✅] Test Finish for $DOMAIN_FILE!"
       done
 
@@ -116,9 +123,6 @@ check-domain-healthcheck-path-with-hosts:
       echo "Test Domain Healthcheck path with hosts file!"
       chmod +x update-hosts.sh parser-healthcheck-path.sh test.sh
 
-      pre_notify=":pepe-sprint: :pepe-sprint: Start Healthcheck for ALL Domains :pepe-sprint: :pepe-sprint:"
-      curl -d "token=$SKYNEX_TOKEN&message=$pre_notify&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
-
       echo "[*] Parser URL Healthcheck"
       bash ./parser-healthcheck-path.sh $DOMAIN_FILE
 
@@ -127,9 +131,6 @@ check-domain-healthcheck-path-with-hosts:
 
       echo "[*] Start Running Test"
       bash ./test.sh $DOMAIN_FILE
-
-      post_notify="🏁 Test Finish!"
-      curl -d "token=$SKYNEX_TOKEN&message=$post_notify&conversationId=$REPORT_GROUP_ID" $SKYNEX_WEBHOOK
 
       echo "[*] Test Finish!"
   allow_failure: true
