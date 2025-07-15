@@ -273,8 +273,6 @@ https://stdcsv2.oneops.net/health
 https://alp1.gatonic.com/liveness
 https://alp2.gatonic.com/liveness
 https://alp3.gatonic.com/liveness
-https://mbp1.gatonic.com/liveness
-https://mbp2.gatonic.com/liveness
 https://mbp3.gatonic.com/main/health
 https://mbc.gatonic.com/main/health
 https://mb.gatonic.com/main/health
