@@ -4,7 +4,6 @@ https://vn-dep-api-gw.amazzu.com
 https://deposit-api-gw.oneops.net
 https://internal.amazzu.com/whoami.aspx
 https://lap.amazzu.com/whoami.aspx
-https://lap.12betsports.com/whoami.aspx
 https://lap.owadmin999.com/whoami.aspx
 https://lap.bpadmin999.com/whoami.aspx
 https://lap.jollyadmin888.com/whoami.aspx
@@ -57,7 +56,5 @@ https://affxml.com/whoami
 https://www.affxml.com/whoami
 https://portal.1100011.com/feeds/whoami
 https://feeds.12bet.com/feeds/whoami
-https://feeds.12ying.com/feeds/whoami
-https://dafabet.1100011.com/feeds/whoami
 https://licbot.oneops.net/whoami
 https://licbotwebhook.starixplay.com/whoami
