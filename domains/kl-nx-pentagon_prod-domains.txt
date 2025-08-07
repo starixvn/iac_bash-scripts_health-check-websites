@@ -4,15 +4,16 @@ https://adm.sabagame.com/health
 https://adm.gamesaba.com/health
 https://result.sabagame.com/health
 https://result.gamesaba.com/health
-https://proxy.sabagame.com/sedie/
-https://proxy.gamesaba.com/sedie/
-https://proxy.sabagame.net/sedie/
+https://proxy.sabagame.com/sedie
+https://proxy.gamesaba.com/sedie
+https://proxy.sabagame.net/sedie
 https://guides.sabagame.com
 https://guides.gamesaba.com
 https://guides.sabagame.net
 https://gw.sabagame.com
 https://gw.gamesaba.com
 https://gw.sabagame.net
+https://admperf.sabagame.com/health
 https://mgapi.sabagame.com
 https://mgadm.sabagame.com/api
 https://api.vgames88.com
@@ -21,8 +22,8 @@ https://adm.vgames88.com
 https://adm.playvgames.com
 https://result.vgames88.com/health
 https://result.playvgames.com/health
-https://proxy.vgames88.com/sedie/
-https://proxy.playvgames.com/sedie/
+https://proxy.vgames88.com/sedie
+https://proxy.playvgames.com/sedie
 https://guides.vgames88.com
 https://guides.playvgames.com
 https://gw.vgames88.com
@@ -33,7 +34,7 @@ https://api.numberx.win
 https://api2.numberx.win
 https://adm.numberx.win
 https://adm2.numberx.win
-https://result.numberx.win
+https://result.numberx.win/health
 https://result2.numberx.win/health
 https://proxy.numberx.win/bacball1
 https://proxy2.numberx.win/bacball1
@@ -51,7 +52,7 @@ https://www.hotdog-games.com
 https://api.hotdog-games.com
 https://adm.hotdog-games.com
 https://result.hotdog-games.com/health
-https://proxy.hotdog-games.com/sedie/
+https://proxy.hotdog-games.com/sedie
 https://guides.hotdog-games.com
 https://gw.hotdog-games.com
 https://client.hotdog-games.com/portrait-client-2
@@ -60,4 +61,4 @@ https://lobby.hotdog-games.com
 https://ow.hotdog-games.com
 https://whoami-be.sabagame.com
 https://admpromo.vgames88.com
-https://mgproxy.sabagame.com/soccer-marble
+https://mgproxy.sabagame.com
